@@ -1,0 +1,11 @@
+//Import Fonts From Google Fonts In style.scss
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+//Ant Design Import In style.scss
+@import url("antd/dist/antd.css");
+//Global Style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
