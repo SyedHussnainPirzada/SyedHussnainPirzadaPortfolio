@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Switch from "@mui/material/Switch";
 import { Link } from "react-scroll";
+
 const Header = () => {
+  const [theme, setTheme] = useState("light-theme");
+  const toggleTheme = () => {
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg mt-3">
         <div className="container-fluid mx-5">
-          <Link className="navbar-brand" to="home">
-            Navbar
+          <Link className="navbar-brand fs-3" to="home">
+            Hussnain
+            <br />
           </Link>
           <button
             className="navbar-toggler"
@@ -57,6 +67,7 @@ const Header = () => {
                   Contact
                 </Link>
               </li>
+              <Switch className="fs-4" onClick={() => toggleTheme()} />
             </ul>
           </div>
         </div>

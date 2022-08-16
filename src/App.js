@@ -6,10 +6,12 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "./assets/style/style.scss";
 //Import Header In App.js
 import Header from "./components/Header";
-
+// Import WebCursor In App.js
+import WebCursor from "./components/WebCursor";
 const App = () => {
   return (
     <>
+      <WebCursor />
       <Header />
     </>
   );
