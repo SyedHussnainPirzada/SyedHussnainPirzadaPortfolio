@@ -3,23 +3,44 @@
 //Ant Design Import In style.scss
 @import url("antd/dist/antd.css");
 //Global Style
-html {
-  --cursor-color: rgb(242, 165, 165);
-}
-
-html.dark-mode {
-  --cursor-color: rgb(226, 145, 145);
-}
-
+$color-white: #fff;
+$color-black: #000;
+$color-text-butn: #6244c5;
+$color-other: #ffc448;
+$color-abc: #5a5a5a;
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
 }
+::selection {
+  background: $color-other;
+  color: $color-text-butn;
+}
+//Cursor Whole Website Start Here
+
+html {
+  --cursor-color: rgb(133, 58, 202);
+}
+
+html.dark-mode {
+  --cursor-color: rgb(135, 8, 254);
+}
+//Cursor Whole Website Ends Here
+//Website Theme Dark/Light Start Here
 .light-theme {
   background: #fff;
   color: #000;
+  .navbar-brand {
+    color: #000 !important;
+  }
+  .nav-link {
+    color: #000 !important;
+  }
+  .menu_color {
+    color: #000 !important;
+  }
 }
 .dark-theme {
   background: #000;
@@ -27,18 +48,40 @@ html.dark-mode {
   .navbar-brand {
     color: #fff !important;
   }
-  .nav-link {
+  .nav-link,
+  h1,
+  .menu_color,
+  .about_text h6 {
     color: #fff !important;
   }
+  .card {
+    background: $color-black !important;
+    box-shadow: 0 0 20px -2px $color-white !important;
+    .card-head h4 {
+      color: $color-white !important;
+    }
+  }
+  .Home h4,
+  h5,
+  button {
+    color: $color-white;
+  }
+  .buttonOne:focus {
+    border: 1px solid $color-text-butn !important;
+  }
+  .shadows {
+    box-shadow: 0 0 20px -2px $color-white !important;
+  }
 }
-//Scroll Bar Of Website Design
+//Website Theme Dark/Light Ends Here
+//Scroll Bar Of Website Design Start Here
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px rgb(129, 77, 177);
   border-radius: 10px;
 }
 
@@ -51,4 +94,134 @@ html.dark-mode {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(138, 85, 188);
+}
+//Scroll Bar Of Website Design Ends Here
+//Scroll To Top Start Here
+.scrollTop {
+  position: fixed;
+  bottom: 5%;
+  right: 2% !important;
+  padding: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 1;
+  background: #6244c5;
+  color: yellow;
+  border-radius: 50% !important;
+  font-size: 22px !important;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+//Scroll To Top Ends Here
+// Heading For All Starts From Here
+.main_heading h1 p {
+  font-size: 16px !important;
+  color: $color-text-butn !important;
+}
+// Heading For All Ends From Here
+//Navbar Bar Of Website Design Start Here
+.nav-link {
+  font-size: 17px !important;
+  margin-right: 20px !important;
+  &:hover {
+    color: #6244c5 !important;
+  }
+}
+.navbar-nav > .active > a {
+  background-color: rgb(133, 58, 202);
+}
+.logo {
+  width: 180px !important;
+  height: auto !important;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.buttonTwo:focus:not(:focus-visible),
+.navbar-toggler:focus {
+  outline: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+//Navbar Bar Of Website Design Ends Here
+.bbb {
+  position: relative;
+  top: 35%;
+  left: 37%;
+  // shifts or translate the center point (X, Y) by (X - 50% of outerWidth, Y - 50% of outerHeight)
+  transform: translate(-50%, -50%);
+}
+//Home Css Start From Here
+.Home {
+  margin-top: 200px !important;
+}
+.Home h4 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.Home h5 {
+  font-size: 26px;
+}
+.Home h4 span {
+  color: $color-text-butn;
+}
+.buttonOne,
+.buttonTwo {
+  border-radius: 50px !important;
+  padding: 10px 20px !important;
+  width: 200px !important;
+}
+.buttonOne {
+  border: 1px solid $color-text-butn !important;
+  color: $color-text-butn !important;
+}
+.buttonTwo {
+  background-color: $color-text-butn;
+  color: $color-white;
+  outline: none !important;
+  border: none !important;
+  &:hover {
+    background: $color-text-butn;
+    color: $color-white;
+  }
+}
+//Home Css Ends From Here
+//About Css Starts From Here
+.shadows {
+  box-shadow: 0 0 20px -2px $color-black !important;
+  border-radius: 4px !important;
+}
+.about_text {
+  padding: 20px;
+}
+.about_text span {
+  display: block;
+}
+.about_text span::before,
+.card-body h6::before {
+  content: "🔵" !important;
+  color: $color-abc !important;
+  padding-right: 10px !important;
+  font-size: 8px !important;
+  border-radius: none !important;
+  outline: none !important;
+}
+//About Css Ends From Here
+@media only screen and (max-width: 600px) {
+  .d-flex {
+    display: inline-block !important;
+  }
 }

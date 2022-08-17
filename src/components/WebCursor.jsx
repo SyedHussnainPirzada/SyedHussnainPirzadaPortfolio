@@ -6,7 +6,7 @@ const WebCursor = () => {
     <AnimatedCursor
       innerSize={8}
       outerSize={20}
-      color="193, 11, 111"
+      color="129, 77, 177"
       outerAlpha={0.2}
       innerScale={0.7}
       outerScale={5}

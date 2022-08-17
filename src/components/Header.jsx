@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Switch from "@mui/material/Switch";
 import { Link } from "react-scroll";
-
+//Import Ant Design Logo
+import { MenuOutlined } from "@ant-design/icons";
 const Header = () => {
   const [theme, setTheme] = useState("light-theme");
   const toggleTheme = () => {
@@ -12,11 +13,10 @@ const Header = () => {
   }, [theme]);
   return (
     <>
-      <nav className="navbar navbar-expand-lg mt-3">
+      <nav className="navbar navbar-expand-lg pt-4">
         <div className="container-fluid mx-5">
           <Link className="navbar-brand fs-3" to="home">
             Hussnain
-            <br />
           </Link>
           <button
             className="navbar-toggler"
@@ -27,7 +27,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <MenuOutlined className="menu_color" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
