@@ -13,7 +13,7 @@ const Header = () => {
   }, [theme]);
   return (
     <>
-      <nav className="navbar navbar-expand-lg pt-4">
+      <nav className="navbar navbar-expand-lg pt-4 sticky-top">
         <div className="container-fluid mx-5">
           <Link className="navbar-brand fs-3" to="home">
             Hussnain
@@ -45,6 +45,11 @@ const Header = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="about" spy={true} smooth={true}>
                   About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="skills" spy={true} smooth={true}>
+                  Skills
                 </Link>
               </li>
               <li className="nav-item">

@@ -1,29 +1,27 @@
 import React from "react";
 import About from "../views/About";
+import Contact from "../views/Contact";
 import Home from "../views/Home";
 import Services from "../views/Services";
+import Skills from "../views/Skills";
 
 const MiddleSection = () => {
   return (
     <>
-      <div id="home" style={{ height: 500 }} className="mx-5">
+      <div id="home" style={{ height: 600 }} className="mx-5 home_main_div">
         <Home />
       </div>
-      <div id="about" className="mx-5">
+      <div id="about" style={{ height: 600 }} className="mx-5 home_main_div">
         <About />
       </div>
-      <div id="services" className="mx-5 my-5 py-4">
+      <div id="skills" style={{ height: 600 }} className="mx-5 home_main_div">
+        <Skills />
+      </div>
+      <div id="services" style={{ height: 600 }} className="mx-5 home_main_div">
         <Services />
       </div>
-      <div
-        id="contact"
-        style={{ height: 800, border: "1px solid black" }}
-        className="mx-5 my-2"
-      >
-        <h1>This is Contact section</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-        repellendus. Totam nihil similique a repellat minus dolor amet quasi.
-        Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+      <div id="contact" style={{ height: 600 }} className="mx-5 home_main_div">
+        <Contact />
       </div>
     </>
   );

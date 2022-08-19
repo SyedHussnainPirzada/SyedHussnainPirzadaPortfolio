@@ -5,7 +5,7 @@ import MyImage from "../assets/images/myImage.png";
 const Home = () => {
   return (
     <>
-      <div className="container bbb mt-5">
+      <div className="container bbb">
         <div className="col-10 mx-auto ">
           <div className="row ">
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -16,7 +16,9 @@ const Home = () => {
                 <Typical
                   steps={[
                     "React Js Developer",
-                    2000,
+                    2500,
+                    "React Native Developer",
+                    2500,
                     "Front End Developer",
                     2000,
                   ]}

@@ -8,6 +8,11 @@ $color-black: #000;
 $color-text-butn: #6244c5;
 $color-other: #ffc448;
 $color-abc: #5a5a5a;
+$color-contact: #ded7d7;
+$color-red: red;
+$color-facebook: #0b86ea;
+$color-linkedin: #2464ac;
+$color-skype: #018dd0;
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +46,16 @@ html.dark-mode {
   .menu_color {
     color: #000 !important;
   }
+  .navbar {
+    opacity: 0.9 !important;
+    background: $color-text-butn;
+    .nav-link {
+      color: $color-white !important;
+    }
+    .navbar-brand {
+      color: $color-white !important;
+    }
+  }
 }
 .dark-theme {
   background: #000;
@@ -51,13 +66,15 @@ html.dark-mode {
   .nav-link,
   h1,
   .menu_color,
-  .about_text h6 {
+  .about_text h6,
+  .dark-white {
     color: #fff !important;
   }
   .card {
     background: $color-black !important;
     box-shadow: 0 0 20px -2px $color-white !important;
-    .card-head h4 {
+    .card-head h4,
+    .card-body h6 {
       color: $color-white !important;
     }
   }
@@ -72,6 +89,12 @@ html.dark-mode {
   .shadows {
     box-shadow: 0 0 20px -2px $color-white !important;
   }
+  .contact-info h6 {
+    color: $color-white !important;
+  }
+  .github {
+    border: 1px solid $color-white;
+  }
 }
 //Website Theme Dark/Light Ends Here
 //Scroll Bar Of Website Design Start Here
@@ -81,19 +104,19 @@ html.dark-mode {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(129, 77, 177);
+  box-shadow: inset 0 0 5px color-text-butn;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(133, 58, 202);
+  background: color-text-butn;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(138, 85, 188);
+  background: color-text-butn;
 }
 //Scroll Bar Of Website Design Ends Here
 //Scroll To Top Start Here
@@ -133,20 +156,17 @@ html.dark-mode {
 }
 // Heading For All Ends From Here
 //Navbar Bar Of Website Design Start Here
-.nav-link {
-  font-size: 17px !important;
-  margin-right: 20px !important;
-  &:hover {
-    color: #6244c5 !important;
-  }
-}
-.navbar-nav > .active > a {
-  background-color: rgb(133, 58, 202);
-}
-.logo {
-  width: 180px !important;
-  height: auto !important;
-}
+// .nav-link {
+//   font-size: 17px !important;
+//   margin-right: 20px !important;
+//   &:hover {
+//     color: #6244c5 !important;
+//   }
+// }
+// .navbar-nav > .active > a {
+//   background-color: rgb(133, 58, 202);
+// }
+
 .navbar-toggler {
   border: none !important;
 }
@@ -165,6 +185,10 @@ html.dark-mode {
   transform: translate(-50%, -50%);
 }
 //Home Css Start From Here
+.home_main_div {
+  height: 100vh !important;
+  padding-top: 200px !important;
+}
 .Home {
   margin-top: 200px !important;
 }
@@ -201,7 +225,8 @@ html.dark-mode {
 //Home Css Ends From Here
 //About Css Starts From Here
 .shadows {
-  box-shadow: 0 0 20px -2px $color-black !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
   border-radius: 4px !important;
 }
 .about_text {
@@ -210,8 +235,7 @@ html.dark-mode {
 .about_text span {
   display: block;
 }
-.about_text span::before,
-.card-body h6::before {
+.about_text span::before {
   content: "🔵" !important;
   color: $color-abc !important;
   padding-right: 10px !important;
@@ -219,7 +243,122 @@ html.dark-mode {
   border-radius: none !important;
   outline: none !important;
 }
+
 //About Css Ends From Here
+//Skills Css Start From Here
+
+.counterUp {
+  margin: auto;
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: $color-text-butn !important;
+  color: $color-white !important;
+  height: 100px;
+  width: 100px;
+  border-radius: 50% !important;
+  font-size: 16px !important;
+}
+//Skills Css Ends From Here
+//Contact Css Start From Here
+.contact-outer-heading {
+  display: flex;
+  justify-content: right;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: none !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+.label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+.label span {
+  color: $color-red !important;
+}
+.contact-info {
+  position: relative;
+  top: 15%;
+}
+.contact-info h5 {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px !important;
+}
+.contact-info h6 {
+  text-align: center !important;
+}
+.contact-info h6 span {
+  display: block;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+.icons-contact {
+  display: flex;
+  font-size: 30px !important;
+  justify-content: space-evenly;
+  font-weight: 600 !important;
+  margin-top: 30px !important;
+}
+.facebook {
+  margin: auto;
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: $color-facebook !important;
+  color: $color-white !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+}
+.linkedin {
+  margin: auto;
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: $color-linkedin !important;
+  color: $color-white !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+}
+.skype {
+  margin: auto;
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: $color-skype !important;
+  color: $color-white !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+}
+.github {
+  margin: auto;
+  display: flex !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: $color-black !important;
+  color: $color-white !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+}
+//Contact Css Ends From Here
 @media only screen and (max-width: 600px) {
   .d-flex {
     display: inline-block !important;
